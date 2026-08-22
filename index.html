@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tako — Diseñador Gráfico · Identidad de Marca y Diseño Visual</title>
+  <meta name="description" content="Tako es un estudio unipersonal de diseño gráfico: identidades de marca, empaques y sistemas editoriales que mueven a las personas." />
+  <meta name="theme-color" content="#0B0B0E" />
+
+  <link rel="icon" type="image/png" href="assets/favicon-16x16.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { corePlugins: { preflight: false } };
+  </script>
+</head>
+<body>
+  <!-- Fondo decorativo: orbes de luz para potenciar el glassmorphism -->
+  <div class="orb-bg fixed inset-0 z-[-2] pointer-events-none overflow-hidden" aria-hidden="true">
+    <div class="orb absolute w-[620px] h-[620px] rounded-full bg-[#6900FF]/15 blur-[128px] -top-40 -left-44 animate-[orb-drift-a_28s_ease-in-out_infinite_alternate]"></div>
+    <div class="orb absolute w-[720px] h-[720px] rounded-full bg-indigo-900/25 blur-[128px] top-1/3 -right-56 animate-[orb-drift-b_32s_ease-in-out_infinite_alternate]"></div>
+    <div class="orb absolute w-[560px] h-[560px] rounded-full bg-[#7A1BFF]/10 blur-[128px] -bottom-48 left-1/4 animate-[orb-drift-c_24s_ease-in-out_infinite_alternate]"></div>
+  </div>
+
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <span class="preloader__word" id="preloaderWord">Tako</span>
+      <span class="preloader__count" id="preloaderCount">0</span>
+    </div>
+  </div>
+
+  <!-- Barra de progreso de scroll -->
+  <div class="progress" aria-hidden="true"><span class="progress__bar" id="progressBar"></span></div>
+
+  <!-- Navegación -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a class="nav__brand" href="#top" aria-label="Tako — volver arriba">
+        <img class="nav__logo" src="assets/Logo_Horizontal_blanco.png" alt="Tako — logo horizontal" width="1800" height="573" />
+      </a>
+
+      <nav class="nav__links" aria-label="Principal">
+        <a href="#work">Trabajo</a>
+        <a href="#services">Servicios</a>
+        <a href="#about">Estudio</a>
+        <a href="#process">Proceso</a>
+        <a class="nav__cta" href="#contact">Empezar un proyecto</a>
+      </nav>
+
+      <button class="nav__toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menú">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Menú móvil -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-menu__nav" aria-label="Móvil">
+      <a href="#work">Trabajo</a>
+      <a href="#services">Servicios</a>
+      <a href="#about">Estudio</a>
+      <a href="#process">Proceso</a>
+      <a href="#contact">Empezar un proyecto</a>
+    </nav>
+    <p class="mobile-menu__contact">
+      <a href="mailto:carlosrodriguez8999@gmail.com">carlosrodriguez8999@gmail.com</a>
+    </p>
+  </div>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="hero__bg" aria-hidden="true">
+        <video class="hero__video" autoplay muted loop playsinline preload="auto">
+          <source src="assets/video_hero.mp4" type="video/mp4" />
+        </video>
+        <div class="hero__scrim"></div>
+      </div>
+
+      <div class="hero__content container">
+        <span class="hero__pill">Soluciones Creativas e Innovadoras</span>
+
+        <h1 class="hero__title">
+          <span class="hero__title-line">Revolucionando el diseño</span>
+          <span class="hero__title-line hero__title-line--grad">con Animación y Motion</span>
+        </h1>
+
+        <p class="hero__sub">Lleva tu marca al siguiente nivel con experiencias visuales de alto impacto.</p>
+
+        <div class="hero__trust">
+          <div class="hero__avatars" aria-hidden="true">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="" loading="lazy" width="48" height="48" />
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="" loading="lazy" width="48" height="48" />
+            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="" loading="lazy" width="48" height="48" />
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="" loading="lazy" width="48" height="48" />
+          </div>
+          <span>Con la confianza de más de 79 clientes</span>
+        </div>
+
+        <div class="hero__actions">
+          <a class="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-[#6900FF] focus:ring-offset-2 focus:ring-offset-[#030508]" href="#contact">
+          <span class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#6900FF_50%,#E2CBFF_100%)]"></span>
+          <span class="relative inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#030508] px-8 py-1 text-sm font-medium text-white backdrop-blur-3xl">Empezar</span>
+        </a>
+          <a class="hero__btn hero__btn--ghost" href="#work">Saber más</a>
+        </div>
+      </div>
+
+      <div class="hero__metrics">
+        <div class="hero__metric"><strong>8+</strong><span>Años de Experiencia</span></div>
+        <div class="hero__metric"><strong>79+</strong><span>Proyectos Entregados</span></div>
+        <div class="hero__metric"><strong>95%</strong><span>Satisfacción</span></div>
+      </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Identidad de marca</span><i class="marquee__dot"></i>
+        <span>Empaque</span><i class="marquee__dot"></i>
+        <span>Editorial</span><i class="marquee__dot"></i>
+        <span>Dirección de arte</span><i class="marquee__dot"></i>
+        <span>Motion</span><i class="marquee__dot"></i>
+        <span>Ilustración</span><i class="marquee__dot"></i>
+        <span>Identidad de marca</span><i class="marquee__dot"></i>
+        <span>Empaque</span><i class="marquee__dot"></i>
+        <span>Editorial</span><i class="marquee__dot"></i>
+        <span>Dirección de arte</span><i class="marquee__dot"></i>
+        <span>Motion</span><i class="marquee__dot"></i>
+        <span>Ilustración</span><i class="marquee__dot"></i>
+      </div>
+    </div>
+
+    <!-- Trabajo -->
+    <section class="section" id="work">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow reveal">Trabajo seleccionado</p>
+          <div class="section__row">
+            <h2 class="h-display reveal">El trabajo<br />que habla solo.</h2>
+            <p class="section__lede reveal">Un puñado de proyectos recientes — cada uno una identidad completa, creada para ser vista, recordada y repetida.</p>
+          </div>
+        </header>
+
+        </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[350px] max-w-7xl mx-auto px-6">
+        <!-- Motion Graphics - vertical -->
+        <a href="#contact" aria-label="Tech Talent — Motion &amp; Reels" class="relative block overflow-hidden rounded-[2.5rem] bg-[#0A0D14] border border-white/10 group cursor-pointer shadow-2xl shadow-black/50 md:col-span-1 md:row-span-2 transition-colors duration-500 group-hover:border-[#6900FF]/50">
+          <video class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/Motion_Graphics.mp4" autoplay loop muted playsinline></video>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#030508] via-[#030508]/40 to-transparent transition-opacity duration-500 group-hover:opacity-60"></div>
+          <div class="absolute bottom-0 left-0 w-full p-8 translate-y-8 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+            <span class="inline-flex items-center rounded-full bg-[#6900FF]/20 px-4 py-1 text-xs font-medium uppercase tracking-wider text-[#6900FF]">Motion &amp; Reels</span>
+            <h3 class="mt-3 text-2xl font-bold text-white">Tech Talent</h3>
+          </div>
+        </a>
+
+        <!-- Identidad - cuadrada -->
+        <a href="#contact" aria-label="Ormi Black — Branding" class="relative block overflow-hidden rounded-[2.5rem] bg-[#0A0D14] border border-white/10 group cursor-pointer shadow-2xl shadow-black/50 md:col-span-1 md:row-span-1 transition-colors duration-500 group-hover:border-[#6900FF]/50">
+          <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/work/Mockup-franela-ormi-black.jpg" alt="Mockup de franela — Ormi Black" loading="lazy" width="800" height="800" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#030508] via-[#030508]/40 to-transparent transition-opacity duration-500 group-hover:opacity-60"></div>
+          <div class="absolute bottom-0 left-0 w-full p-8 translate-y-8 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+            <span class="inline-flex items-center rounded-full bg-[#6900FF]/20 px-4 py-1 text-xs font-medium uppercase tracking-wider text-[#6900FF]">Branding</span>
+            <h3 class="mt-3 text-2xl font-bold text-white">Ormi Black</h3>
+          </div>
+        </a>
+
+        <!-- Diseño corporativo - ancha -->
+        <a href="#contact" aria-label="CJ Constructora — Identidad Visual" class="relative block overflow-hidden rounded-[2.5rem] bg-[#0A0D14] border border-white/10 group cursor-pointer shadow-2xl shadow-black/50 md:col-span-2 md:row-span-1 transition-colors duration-500 group-hover:border-[#6900FF]/50">
+          <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/work/Identidad_Visual_Cj.jpg" alt="Identidad visual — CJ Constructora" loading="lazy" width="1200" height="700" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#030508] via-[#030508]/40 to-transparent transition-opacity duration-500 group-hover:opacity-60"></div>
+          <div class="absolute bottom-0 left-0 w-full p-8 translate-y-8 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+            <span class="inline-flex items-center rounded-full bg-[#6900FF]/20 px-4 py-1 text-xs font-medium uppercase tracking-wider text-[#6900FF]">Identidad Visual</span>
+            <h3 class="mt-3 text-2xl font-bold text-white">CJ Constructora</h3>
+          </div>
+        </a>
+      </div>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="section section--tight" id="services">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow reveal">Servicios</p>
+          <h2 class="h-display reveal">Un cerebro,<br />ocho brazos.</h2>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[250px]">
+          <!-- Tarjeta 1: Motion Graphics & Reels (alta) -->
+          <article class="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-[2rem] overflow-hidden p-8 flex flex-col group shadow-2xl shadow-black/50 md:col-span-1 md:row-span-2 reveal">
+            <span class="pointer-events-none absolute -bottom-24 -right-24 h-60 w-60 rounded-full bg-[#6900FF]/20 blur-[100px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
+
+            <h3 class="text-2xl font-bold text-white mb-2">Motion Graphics &amp; Reels</h3>
+            <p class="text-sm text-gray-400">Animaciones verticales que retienen la atención</p>
+
+            <!-- Teléfono abstracto iluminado en morado -->
+            <div class="absolute -right-8 bottom-6 w-48 rotate-6 rounded-[2rem] border border-white/15 bg-[#0b0b0e]/70 p-3 shadow-[0_0_80px_rgba(105,0,255,0.45)] backdrop-blur-md transition-transform duration-500 group-hover:-rotate-2 group-hover:scale-105">
+              <div class="mb-3 flex items-center justify-between">
+                <span class="h-2 w-10 rounded-full bg-white/15"></span>
+                <span class="flex gap-1"><i class="h-1.5 w-1.5 rounded-full bg-[#6900FF]"></i><i class="h-1.5 w-1.5 rounded-full bg-white/15"></i></span>
+              </div>
+              <div class="mb-2 h-16 rounded-xl bg-gradient-to-br from-[#6900FF]/70 via-[#7B1BFF]/40 to-indigo-600/30"></div>
+              <div class="mb-1.5 h-2 w-3/4 rounded-full bg-white/15"></div>
+              <div class="mb-1.5 h-2 w-1/2 rounded-full bg-white/10"></div>
+              <div class="h-2 w-2/3 rounded-full bg-[#6900FF]/40"></div>
+              <span class="absolute -right-2.5 -top-1 h-14 w-2 rounded-full bg-white/10"></span>
+              <span class="absolute -right-2.5 top-6 h-6 w-2 rounded-full bg-white/10"></span>
+            </div>
+          </article>
+
+          <!-- Tarjeta 2: Identidad Visual (cuadrada) -->
+          <article class="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-[2rem] overflow-hidden p-8 flex flex-col group shadow-2xl shadow-black/50 md:col-span-1 md:row-span-1 reveal">
+            <span class="pointer-events-none absolute -bottom-24 -right-24 h-60 w-60 rounded-full bg-[#6900FF]/20 blur-[100px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
+
+            <h3 class="text-2xl font-bold text-white mb-2">Identidad Visual</h3>
+            <p class="text-sm text-gray-400">Logos y branding memorable</p>
+
+            <!-- Tipografía abstracta minimalista en la esquina inferior derecha -->
+            <span class="pointer-events-none absolute -right-6 -bottom-10 select-none font-black leading-none text-[11rem] tracking-tighter text-white/10">A</span>
+            <span class="pointer-events-none absolute right-12 bottom-16 h-5 w-5 rounded-md bg-[#6900FF] shadow-[0_0_28px_rgba(105,0,255,0.9)] transition-transform duration-500 group-hover:rotate-45 group-hover:scale-125"></span>
+          </article>
+
+          <!-- Tarjeta 3: UI/UX Web Design (cuadrada) -->
+          <article class="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-[2rem] overflow-hidden p-8 flex flex-col group shadow-2xl shadow-black/50 md:col-span-1 md:row-span-1 reveal">
+            <span class="pointer-events-none absolute -bottom-24 -right-24 h-60 w-60 rounded-full bg-[#6900FF]/20 blur-[100px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
+
+            <h3 class="text-2xl font-bold text-white mb-2">UI/UX Web Design</h3>
+            <p class="text-sm text-gray-400">Interfaces modernas y funcionales</p>
+
+            <!-- Wireframe de navegador + cursor flotante -->
+            <div class="pointer-events-none absolute -right-5 top-1/2 w-44 -translate-y-1/2 rotate-3 rounded-xl border border-white/15 bg-[#0b0b0e]/70 p-3 backdrop-blur-md transition-transform duration-500 group-hover:rotate-0 group-hover:-translate-y-[50%]">
+              <div class="mb-2 flex gap-1.5">
+                <span class="h-2 w-2 rounded-full bg-[#ff5f57]/80"></span>
+                <span class="h-2 w-2 rounded-full bg-[#febc2e]/80"></span>
+                <span class="h-2 w-2 rounded-full bg-[#28c840]/80"></span>
+              </div>
+              <div class="flex gap-2">
+                <div class="h-14 w-1/3 rounded-md bg-white/10"></div>
+                <div class="flex-1 space-y-1.5 py-1">
+                  <span class="block h-2 w-2/3 rounded-full bg-white/15"></span>
+                  <span class="block h-2 w-full rounded-full bg-white/10"></span>
+                  <span class="block h-2 w-4/5 rounded-full bg-[#6900FF]/40"></span>
+                </div>
+              </div>
+            </div>
+
+            <svg class="pointer-events-none absolute bottom-6 right-8 h-6 w-6 text-[#6900FF] drop-shadow-[0_0_6px_rgba(105,0,255,0.8)] transition-transform duration-500 group-hover:-translate-x-1.5 group-hover:-translate-y-1.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M5.5 3.21v17.59c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 3.2a.5.5 0 0 0-.85.01Z" />
+            </svg>
+          </article>
+
+          <!-- Tarjeta 4: Carruseles B2B & Redes (ancha) -->
+          <article class="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-[2rem] overflow-hidden p-8 flex flex-col group shadow-2xl shadow-black/50 md:col-span-2 md:row-span-1 reveal">
+            <span class="pointer-events-none absolute -bottom-24 -right-24 h-60 w-60 rounded-full bg-[#6900FF]/20 blur-[100px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
+
+            <h3 class="text-2xl font-bold text-white mb-2">Carruseles B2B &amp; Redes</h3>
+            <p class="text-sm text-gray-400">Diseño estratégico para potenciar tu presencia corporativa</p>
+
+            <!-- Mazo de diapositivas carrusel (esquina inferior derecha) -->
+            <div class="absolute bottom-0 right-12 flex items-end">
+              <div class="w-24 h-32 rounded-t-xl bg-white/5 border border-white/10 backdrop-blur-sm transform rotate-[-15deg] translate-x-12 translate-y-8 transition-transform duration-500 group-hover:translate-y-2 group-hover:rotate-[-20deg]"></div>
+              <div class="w-24 h-36 rounded-t-xl bg-white/10 border border-white/20 backdrop-blur-md z-10 transform rotate-[-5deg] translate-x-6 translate-y-4 transition-transform duration-500 delay-75 group-hover:translate-y-0 group-hover:rotate-[-10deg]"></div>
+              <div class="w-28 h-40 rounded-t-xl bg-[#0A0D14] border border-[#6900FF]/50 shadow-[0_-15px_30px_rgba(105,0,255,0.15)] z-20 transform translate-y-2 transition-transform duration-500 delay-150 group-hover:-translate-y-2 group-hover:rotate-0">
+                <div class="w-3/4 h-2 bg-[#6900FF]/40 rounded-full mx-auto mt-6"></div>
+                <div class="w-1/2 h-2 bg-white/10 rounded-full mx-auto mt-3"></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Estudio -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow reveal">El estudio</p>
+          <h2 class="h-display reveal">Ocho brazos, un solo<br />cerebro, cero límites.</h2>
+        </header>
+
+        <div class="about__grid">
+          <div class="about__copy">
+            <p class="about__lead reveal">Tako significa pulpo. Cada proyecto se trata como un ser vivo: se estudia, se moldea y se lanza al mundo con intención.</p>
+            <p class="reveal">Más de seis años creando marcas para fundadores, equipos pequeños y personas que cuidan los detalles. Trabajo ágil y directo: menos reuniones, más decisiones, y un proceso que mantiene la idea nítida desde el primer boceto hasta el archivo final.</p>
+          </div>
+
+          <figure class="about__mark reveal">
+            <img src="assets/Isotipo_Tako_transparente.png" alt="Isotipo de Tako — la marca del pulpo" width="2042" height="1560" loading="lazy" />
+            <figcaption>Herramientas: Figma · Illustrator · Photoshop · After Effects · Blender</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proceso -->
+    <section class="section section--tight" id="process">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow reveal">Proceso</p>
+          <h2 class="h-display reveal">Cuatro pasos,<br />cero adivinanzas.</h2>
+        </header>
+
+        <div class="process-wrap">
+          <ol class="process">
+            <li class="process__card">
+              <span class="process__dot" aria-hidden="true"></span>
+              <span class="process__num-bg" aria-hidden="true">01</span>
+              <span class="process__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.5"/><path d="m20.5 20.5-3.4-3.4M8.5 11h5M11 8.5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </span>
+              <span class="process__num">01</span>
+              <h3 class="process__name">Descubrir</h3>
+              <p class="process__desc">Mapeamos dónde estás y hacia dónde quieres ir. Entrevistas, análisis del mercado y la historia que solo tú puedes contar.</p>
+            </li>
+            <li class="process__card">
+              <span class="process__dot" aria-hidden="true"></span>
+              <span class="process__num-bg" aria-hidden="true">02</span>
+              <span class="process__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M12 12l4.8-4.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="1.6" stroke="currentColor" stroke-width="1.5"/></svg>
+              </span>
+              <span class="process__num">02</span>
+              <h3 class="process__name">Definir</h3>
+              <p class="process__desc">Estrategia antes que boceto. Posicionamiento, audiencia y el territorio visual que le queda perfecto al encargo.</p>
+            </li>
+            <li class="process__card">
+              <span class="process__dot" aria-hidden="true"></span>
+              <span class="process__num-bg" aria-hidden="true">03</span>
+              <span class="process__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M4 20l1.2-4.2L16.5 4.5l3 3L8.2 18.8 4 20Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="m14 7 3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </span>
+              <span class="process__num">03</span>
+              <h3 class="process__name">Diseñar</h3>
+              <p class="process__desc">Del boceto al pulido en rondas apretadas. Dos direcciones, crítica honesta y decisiones que se quedan.</p>
+            </li>
+            <li class="process__card">
+              <span class="process__dot" aria-hidden="true"></span>
+              <span class="process__num-bg" aria-hidden="true">04</span>
+              <span class="process__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+              </span>
+              <span class="process__num">04</span>
+              <h3 class="process__name">Entregar</h3>
+              <p class="process__desc">Archivos, guía y fuentes organizadas para que tu equipo use la marca sin tener que tenerme en la sala.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Paquetes de Precios -->
+    <section class="section section--tight" id="pricing">
+      <div class="container">
+        <header class="section__head section__head--center">
+          <span class="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-white/80 backdrop-blur">
+            Inversión
+          </span>
+          <h2 class="h-display reveal" style="font-size:clamp(2rem,6vw,3.6rem)">
+            Precios <span class="text-[#6900FF]">sin sorpresas</span>
+          </h2>
+          <p class="section__lede reveal" style="color:#a3a3a3">Paquetes claros para llevar tu marca al siguiente nivel.</p>
+        </header>
+
+        <div class="price-grid">
+          <!-- Esencial -->
+          <article class="price-card">
+            <div class="price-card__glow"></div>
+            <div class="price-card__content">
+              <h3 class="price-card__title">Esencial</h3>
+              <div class="price-card__price">
+                <span class="price-card__amount">$25</span>
+                <span class="price-card__period">/ único</span>
+              </div>
+              <p class="price-card__delivery">Entrega: 4 a 5 días</p>
+
+              <p class="price-card__label">Incluye:</p>
+              <ul class="price-card__features">
+                <li class="price-card__feature">
+                  <svg class="price-card__check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Diseño único
+                </li>
+                <li class="price-card__feature">
+                  <svg class="price-card__check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  2 Revisiones
+                </li>
+                <li class="price-card__feature">
+                  <svg class="price-card__check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Paleta Básica
+                </li>
+                <li class="price-card__feature">
+                  <svg class="price-card__check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Archivos PNG/JPG/PDF
+                </li>
+              </ul>
+
+              <a href="#contact" class="price-card__cta">Elegir plan</a>
+            </div>
+          </article>
+
+          <!-- Logo + Branding (destacada) -->
+          <article class="price-card price-card--featured">
+            <div class="price-card__glow"></div>
+            <div class="price-card__badge">Más Popular</div>
+            <div class="price-card__content">
+              <h3 class="price-card__title price-card__title--accent">Logo + Branding</h3>
+              <div class="price-card__price">
+                <span class="price-card__amount price-card__amount--gradient">$60</span>
+                <span class="price-card__period">/ único</span>
+              </div>
+              <p class="price-card__delivery">Entrega: 7 a 10 días</p>
+
+              <p class="price-card__label">Todo lo esencial, más:</p>
+              <ul class="price-card__features">
+                <li class="price-card__feature price-card__feature--highlight">
+                  <svg class="price-card__check price-card__check--accent" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Submarca/Isotipo
+                </li>
+                <li class="price-card__feature price-card__feature--highlight">
+                  <svg class="price-card__check price-card__check--accent" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Tarjeta de presentación
+                </li>
+                <li class="price-card__feature price-card__feature--highlight">
+                  <svg class="price-card__check price-card__check--accent" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Revisiones ilimitadas
+                </li>
+                <li class="price-card__feature price-card__feature--highlight">
+                  <svg class="price-card__check price-card__check--accent" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  3 Mockups Premium
+                </li>
+              </ul>
+
+              <a href="#contact" class="price-card__cta price-card__cta--featured">Elegir plan</a>
+            </div>
+          </article>
+
+          <!-- PRO + Guía -->
+          <article class="price-card">
+            <div class="price-card__glow"></div>
+            <div class="price-card__content">
+              <h3 class="price-card__title">PRO + Guía</h3>
+              <div class="price-card__price">
+                <span class="price-card__amount">$100</span>
+                <span class="price-card__period">/ único</span>
+              </div>
+              <p class="price-card__delivery">Entrega: 8 a 12 días</p>
+
+              <p class="price-card__label">Todo lo de Branding, más:</p>
+              <ul class="price-card__features">
+                <li class="price-card__feature">
+                  <svg class="price-card__check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Papelería Corporativa Completa
+                </li>
+                <li class="price-card__feature">
+                  <svg class="price-card__check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Manual de Identidad Visual (PDF)
+                </li>
+                <li class="price-card__feature">
+                  <svg class="price-card__check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Exportación Web y Redes
+                </li>
+              </ul>
+
+              <a href="#contact" class="price-card__cta">Elegir plan</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="section testimonials" id="testimonials" style="background:#030508">
+      <div class="container">
+        <header class="section__head section__head--center">
+          <span class="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-white/80 backdrop-blur">
+            Testimonios
+          </span>
+          <h2 class="h-display reveal" style="font-size:clamp(2rem,6vw,3.6rem)">
+            Nuestros Clie<span class="text-[#6900FF]">ntes</span>
+          </h2>
+          <p class="section__lede reveal" style="color:#a3a3a3">Marcas y creadores que han transformado su identidad visual con nosotros.</p>
+        </header>
+      </div>
+
+      <div class="container tgrid grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 px-4 md:px-12 pb-12 [-webkit-mask-image:radial-gradient(ellipse_at_center,black_60%,transparent_100%)] [mask-image:radial-gradient(ellipse_at_center,black_60%,transparent_100%)]">
+        <article class="tcard rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 overflow-hidden shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.1)]">
+          <div class="flex items-center gap-3">
+            <img class="h-12 w-12 rounded-full object-cover" src="https://randomuser.me/api/portraits/women/44.jpg" alt="" loading="lazy" width="48" height="48" />
+            <div class="min-w-0">
+              <strong class="block text-base font-semibold text-white">Syxcel</strong>
+              <span class="text-sm text-[#8b90a8]">Real Estate</span>
+            </div>
+          </div>
+          <p class="mt-4 text-sm leading-relaxed text-gray-400">"El diseño de nuestros reels y el branding de las propiedades han elevado por completo nuestra presencia en redes. Resultados impecables."</p>
+        </article>
+
+        <article class="tcard rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 overflow-hidden shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.1)]">
+          <div class="flex items-center gap-3">
+            <img class="h-12 w-12 rounded-full object-cover" src="https://randomuser.me/api/portraits/men/32.jpg" alt="" loading="lazy" width="48" height="48" />
+            <div class="min-w-0">
+              <strong class="block text-base font-semibold text-white">Tecno Computer</strong>
+              <span class="text-sm text-[#8b90a8]">Tecnología B2B</span>
+            </div>
+          </div>
+          <p class="mt-4 text-sm leading-relaxed text-gray-400">"Los carruseles corporativos y el diseño promocional nos han ayudado a posicionar nuestros periféricos con una imagen ultra profesional."</p>
+        </article>
+
+        <article class="tcard rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 overflow-hidden shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.1)]">
+          <div class="flex items-center gap-3">
+            <img class="h-12 w-12 rounded-full object-cover" src="https://randomuser.me/api/portraits/men/75.jpg" alt="" loading="lazy" width="48" height="48" />
+            <div class="min-w-0">
+              <strong class="block text-base font-semibold text-white">Ormi Black</strong>
+              <span class="text-sm text-[#8b90a8]">Artista Urbano</span>
+            </div>
+          </div>
+          <p class="mt-4 text-sm leading-relaxed text-gray-400">"Captó exactamente la esencia que buscaba. El diseño del logo y la tipografía estilo grafiti superaron mis expectativas."</p>
+        </article>
+
+        <article class="tcard rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 overflow-hidden shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.1)]">
+          <div class="flex items-center gap-3">
+            <img class="h-12 w-12 rounded-full object-cover" src="https://randomuser.me/api/portraits/women/68.jpg" alt="" loading="lazy" width="48" height="48" />
+            <div class="min-w-0">
+              <strong class="block text-base font-semibold text-white">TechTalent</strong>
+              <span class="text-sm text-[#8b90a8]">Recursos Humanos</span>
+            </div>
+          </div>
+          <p class="mt-4 text-sm leading-relaxed text-gray-400">"La estructuración visual de nuestras campañas y la atención al detalle han mejorado nuestra escalabilidad corporativa."</p>
+        </article>
+
+        <article class="tcard rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 overflow-hidden shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.1)]">
+          <div class="flex items-center gap-3">
+            <img class="h-12 w-12 rounded-full object-cover" src="https://randomuser.me/api/portraits/men/41.jpg" alt="" loading="lazy" width="48" height="48" />
+            <div class="min-w-0">
+              <strong class="block text-base font-semibold text-white">CJ Constructora</strong>
+              <span class="text-sm text-[#8b90a8]">Construcción</span>
+            </div>
+          </div>
+          <p class="mt-4 text-sm leading-relaxed text-gray-400">"Lograron un logo minimalista en blanco y negro, con una tipografía contundente que refleja exactamente la solidez de nuestra empresa."</p>
+        </article>
+
+        <article class="tcard rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 overflow-hidden shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.1)]">
+          <div class="flex items-center gap-3">
+            <img class="h-12 w-12 rounded-full object-cover" src="https://randomuser.me/api/portraits/women/65.jpg" alt="" loading="lazy" width="48" height="48" />
+            <div class="min-w-0">
+              <strong class="block text-base font-semibold text-white">Familia Dos Santos</strong>
+              <span class="text-sm text-[#8b90a8]">Gastronomía</span>
+            </div>
+          </div>
+          <p class="mt-4 text-sm leading-relaxed text-gray-400">"La reorganización de nuestros menús y flyers promocionales le dio un giro completamente moderno a nuestra marca."</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section section--contact" id="contact">
+      <div class="container">
+        <header class="section__head section__head--center">
+          <p class="eyebrow reveal">Contacto</p>
+          <h2 class="h-display reveal">Hagamos algo que<br />mueva a las personas.</h2>
+          <p class="section__lede reveal">Cuéntame qué estás construyendo. Suele responder el mismo día — <a class="link" href="mailto:carlosrodriguez8999@gmail.com">carlosrodriguez8999@gmail.com</a></p>
+        </header>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto px-6">
+        <!-- Detalles -->
+        <div class="reveal bg-white/5 backdrop-blur-xl border border-white/10 rounded-[2rem] p-8 lg:p-10">
+          <h3 class="text-xs font-semibold uppercase tracking-[0.22em] text-gray-400">Detalles</h3>
+          <ul class="mt-6 space-y-5">
+            <li class="flex flex-col gap-1 border-b border-white/10 pb-5">
+              <span class="text-sm text-gray-400">Email</span>
+              <a class="text-white/90 transition-colors hover:text-[#6900FF]" href="mailto:carlosrodriguez8999@gmail.com">carlosrodriguez8999@gmail.com</a>
+            </li>
+            <li class="flex flex-col gap-1 border-b border-white/10 pb-5">
+              <span class="text-sm text-gray-400">Teléfono</span>
+              <a class="text-white/90 transition-colors hover:text-[#6900FF]" href="tel:+584243273920">+58 424 327 3920</a>
+            </li>
+            <li class="flex flex-col gap-1 border-b border-white/10 pb-5">
+              <span class="text-sm text-gray-400">Ubicación</span>
+              <span class="text-white/90">Guárico, Venezuela</span>
+            </li>
+            <li class="flex flex-col gap-1 pb-1">
+              <span class="text-sm text-gray-400">Disponibilidad</span>
+              <span class="inline-flex items-center gap-2.5 text-white/90">
+                <span class="inline-block h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
+                Reservando Q3 2026
+              </span>
+            </li>
+          </ul>
+
+          <h3 class="mt-10 text-xs font-semibold uppercase tracking-[0.22em] text-gray-400">Redes</h3>
+          <div class="mt-4 flex flex-wrap gap-3" aria-label="Redes sociales">
+            <a href="#" aria-label="Instagram" class="inline-flex rounded-xl border border-white/10 bg-white/5 p-3 text-gray-300 transition-all hover:border-[#6900FF]/50 hover:bg-[#6900FF]/20">
+              <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg>
+            </a>
+            <a href="#" aria-label="Behance" class="inline-flex rounded-xl border border-white/10 bg-white/5 p-3 text-gray-300 transition-all hover:border-[#6900FF]/50 hover:bg-[#6900FF]/20">
+              <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5"><path d="M2 7h7a3 3 0 0 1 0 6H2V7Zm0 6h8a3 3 0 0 1 0 6H2v-6Zm14-6h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15 9.5a3 3 0 0 1 5 2.3V13h-5a3 3 0 0 1 0-3.5Z" stroke="currentColor" stroke-width="1.6"/></svg>
+            </a>
+            <a href="#" aria-label="Dribbble" class="inline-flex rounded-xl border border-white/10 bg-white/5 p-3 text-gray-300 transition-all hover:border-[#6900FF]/50 hover:bg-[#6900FF]/20">
+              <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M5 8c5-3 12-1 14 4M3.5 14c6-2 10 1 11 6M15 3.5c-3 5-6 8-11 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn" class="inline-flex rounded-xl border border-white/10 bg-white/5 p-3 text-gray-300 transition-all hover:border-[#6900FF]/50 hover:bg-[#6900FF]/20">
+              <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M8 11v5M8 8v.01M12 16v-5m0 0v-1a2.5 2.5 0 0 1 5 0v1v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Formulario -->
+        <form class="form reveal flex flex-col gap-5" id="contactForm" novalidate>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div class="field flex flex-col gap-1.5">
+              <label class="mb-1 text-xs font-semibold uppercase tracking-[0.12em] text-gray-400" for="fName">Nombre</label>
+              <input class="field__input w-full rounded-xl border border-white/10 bg-[#0A0D14]/50 px-4 py-3 text-white backdrop-blur-md transition-all placeholder:text-gray-500 focus:border-[#6900FF] focus:outline-none focus:ring-2 focus:ring-[#6900FF]/50" id="fName" name="name" type="text" autocomplete="name" placeholder="Tu nombre" required />
+              <p class="field__error" data-error-for="name"></p>
+            </div>
+            <div class="field flex flex-col gap-1.5">
+              <label class="mb-1 text-xs font-semibold uppercase tracking-[0.12em] text-gray-400" for="fEmail">Email</label>
+              <input class="field__input w-full rounded-xl border border-white/10 bg-[#0A0D14]/50 px-4 py-3 text-white backdrop-blur-md transition-all placeholder:text-gray-500 focus:border-[#6900FF] focus:outline-none focus:ring-2 focus:ring-[#6900FF]/50" id="fEmail" name="email" type="email" autocomplete="email" placeholder="tucorreo@ejemplo.com" required />
+              <p class="field__error" data-error-for="email"></p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div class="field flex flex-col gap-1.5">
+              <label class="mb-1 text-xs font-semibold uppercase tracking-[0.12em] text-gray-400" for="fType">Tipo de proyecto</label>
+              <select class="field__input w-full rounded-xl border border-white/10 bg-[#0A0D14]/50 px-4 py-3 text-white backdrop-blur-md transition-all focus:border-[#6900FF] focus:outline-none focus:ring-2 focus:ring-[#6900FF]/50" id="fType" name="type" required>
+                <option value="" selected>Elige una opción…</option>
+                <option>Identidad de marca</option>
+                <option>Empaque</option>
+                <option>Editorial y print</option>
+                <option>Dirección de arte</option>
+                <option>Motion y digital</option>
+                <option>Otra cosa</option>
+              </select>
+              <p class="field__error" data-error-for="type"></p>
+            </div>
+            <div class="field flex flex-col gap-1.5">
+              <label class="mb-1 text-xs font-semibold uppercase tracking-[0.12em] text-gray-400" for="fBudget">Presupuesto</label>
+              <select class="field__input w-full rounded-xl border border-white/10 bg-[#0A0D14]/50 px-4 py-3 text-white backdrop-blur-md transition-all focus:border-[#6900FF] focus:outline-none focus:ring-2 focus:ring-[#6900FF]/50" id="fBudget" name="budget" required>
+                <option value="" selected>Elige una opción…</option>
+                <option>Menos de $2.000</option>
+                <option>$2.000 – $5.000</option>
+                <option>$5.000 – $10.000</option>
+                <option>Más de $10.000</option>
+              </select>
+              <p class="field__error" data-error-for="budget"></p>
+            </div>
+          </div>
+
+          <div class="field flex flex-col gap-1.5">
+            <label class="mb-1 text-xs font-semibold uppercase tracking-[0.12em] text-gray-400" for="fMessage">Sobre el proyecto</label>
+            <textarea class="field__input w-full min-h-[120px] resize-y rounded-xl border border-white/10 bg-[#0A0D14]/50 px-4 py-3 text-white backdrop-blur-md transition-all placeholder:text-gray-500 focus:border-[#6900FF] focus:outline-none focus:ring-2 focus:ring-[#6900FF]/50" id="fMessage" name="message" rows="4" placeholder="Cuéntame un poco del proyecto y sus objetivos…" required></textarea>
+            <p class="field__error" data-error-for="message"></p>
+          </div>
+
+          <span class="form__submit relative inline-flex h-14 w-full overflow-hidden rounded-full p-[1px] focus-within:outline-none focus-within:ring-2 focus-within:ring-[#6900FF] focus-within:ring-offset-2 focus-within:ring-offset-[#030508] md:w-auto">
+            <span class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#6900FF_50%,#E2CBFF_100%)]"></span>
+            <button class="relative inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#030508] px-8 py-3 text-sm font-medium text-white backdrop-blur-3xl transition-colors hover:bg-[#030508]/90" type="submit" id="formSubmit">Enviar consulta</button>
+          </span>
+          <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <div class="container pb-14">
+      <div class="border-t border-white/10 pt-8 mt-20">
+        <div class="flex flex-col items-center justify-between gap-6 text-gray-400 md:flex-row">
+          <a class="inline-flex items-center gap-2.5 transition-opacity hover:opacity-80" href="#top" aria-label="Tako — volver arriba">
+            <img class="h-10 w-auto" src="assets/Logo_Horizontal_blanco.png" alt="Tako — logo horizontal" width="1800" height="573" loading="lazy" />
+          </a>
+
+          <nav class="flex flex-wrap justify-center gap-x-8 gap-y-3" aria-label="Pie de página">
+            <a class="text-sm transition-colors hover:text-[#6900FF]" href="#work">Trabajo</a>
+            <a class="text-sm transition-colors hover:text-[#6900FF]" href="#services">Servicios</a>
+            <a class="text-sm transition-colors hover:text-[#6900FF]" href="#about">Estudio</a>
+            <a class="text-sm transition-colors hover:text-[#6900FF]" href="#process">Proceso</a>
+            <a class="text-sm transition-colors hover:text-[#6900FF]" href="#contact">Contacto</a>
+          </nav>
+
+          <p class="text-sm">© <span id="year">2026</span> Estudio Tako. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
