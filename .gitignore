@@ -1,0 +1,28 @@
+# Opencode
+.opencode/
+agents/
+
+# Impeccable skill
+.agents/
+
+# Codex
+.codex/
+
+# Impeccable critique
+.impeccable/
+
+# Design system (local only)
+design-system/
+
+# Screenshots
+_shot_*.png
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+
+# Lock files
+skills-lock.json
