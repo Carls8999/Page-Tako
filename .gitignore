@@ -26,10 +26,3 @@ node_modules/
 
 # Lock files
 skills-lock.json
-
-# Large media files
-assets/video_hero.mp4
-assets/Motion_Graphics.mp4
-assets/work/*.jpg
-assets/*.jpg
-assets/*.mp4
