@@ -231,9 +231,40 @@
   }
 
   /* ---------------- Cleanup scroll triggers on reduce-motion toggle ---------------- */
-  window.matchMedia("(prefers-reduced-motion: reduce)").addEventListener("change", function (m) {
+  var motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+  function onMotionChange(m) {
     if (m.matches) {
       ScrollTrigger.getAll().forEach(function (t) { t.kill(); });
     }
+  }
+  motionQuery.addEventListener("change", onMotionChange);
+  onMotionChange(motionQuery);
+
+  /* ---------------- FAQ accordion animation ---------------- */
+  document.querySelectorAll(".faq-item").forEach(function (item) {
+    var answer = item.querySelector(".faq-item__a");
+    if (!answer) return;
+
+    item.addEventListener("toggle", function () {
+      if (item.open) {
+        answer.style.maxHeight = answer.scrollHeight + "px";
+        answer.style.opacity = "1";
+      } else {
+        answer.style.maxHeight = "0";
+        answer.style.opacity = "0";
+      }
+    });
+
+    /* Set initial state for open items */
+    if (item.open) {
+      answer.style.maxHeight = answer.scrollHeight + "px";
+      answer.style.opacity = "1";
+    } else {
+      answer.style.maxHeight = "0";
+      answer.style.opacity = "0";
+    }
+
+    answer.style.overflow = "hidden";
+    answer.style.transition = "max-height 0.35s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease";
   });
 })();

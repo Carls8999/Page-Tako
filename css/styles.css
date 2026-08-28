@@ -1,7 +1,7 @@
 /* ============================================================
    TAKO — sistema de diseño del portafolio
-   Tinta #0B0B0E · Hueso #F4F2EC · Violeta #690FFF → Azul #1181EE
-   Display: Space Grotesk · Body: Archivo · Acento itálico: Instrument Serif
+   Tinta #0B0B0E · Hueso #F4F2EC · Violeta #6900FF
+   Display: Syne · Body: Manrope · Acento itálico: Instrument Serif
    ============================================================ */
 
 :root {
@@ -10,7 +10,7 @@
   --ink-3: #1a1a21;
   --bone: #f4f2ec;
   --bone-dim: #a8a49b;
-  --accent: #690fff;
+  --accent: #6900FF;
   --accent-2: #1181ee;
   --accent-soft: #7b3bff;
   --grad: linear-gradient(92deg, var(--accent), var(--accent-2));
@@ -30,7 +30,6 @@
   --space-6: 96px;
   --space-7: 128px;
 
-  --radius: 2px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -90,7 +89,7 @@ body::after {
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
-  border-radius: 2px;
+  border-radius: var(--radius);
 }
 
 ::selection { background: var(--accent); color: #fff; }
@@ -140,6 +139,12 @@ body::after {
   text-wrap: pretty;
 }
 .section__head--center .section__lede { margin-inline: auto; }
+.h-display--pricing {
+  font-size: clamp(2rem, 6vw, 3.6rem);
+}
+.section__lede--muted {
+  color: #a3a3a3;
+}
 .link {
   color: var(--bone);
   text-decoration: underline;
@@ -378,7 +383,7 @@ body.is-anim .preloader { visibility: hidden; }
 }
 .hero__title-line { display: block; }
 .hero__title-line--grad {
-  background: linear-gradient(92deg, #ffffff, #6900ff);
+  background: linear-gradient(92deg, #ffffff, var(--accent));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -403,14 +408,27 @@ body.is-anim .preloader { visibility: hidden; }
   font-size: 0.9rem;
 }
 .hero__avatars { display: flex; }
-.hero__avatars img {
+.hero__avatars img,
+.hero__avatar-initial {
   width: 48px;
   height: 48px;
   border-radius: 50%;
   border: 2px solid #030508;
   object-fit: cover;
 }
-.hero__avatars img + img { margin-left: -14px; }
+.hero__avatars img + img,
+.hero__avatar-initial + .hero__avatar-initial { margin-left: -14px; }
+.hero__avatar-initial {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
@@ -418,32 +436,8 @@ body.is-anim .preloader { visibility: hidden; }
   gap: var(--space-2);
 }
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 14px 26px;
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 0.98rem;
-  letter-spacing: 0.01em;
-  text-decoration: none;
-  border-radius: var(--radius);
-  transition: transform 0.25s var(--ease), background 0.25s var(--ease), color 0.25s var(--ease), border-color 0.25s var(--ease);
-  min-height: 44px;
-}
-.btn--primary {
-  background: var(--accent);
-  color: #fff;
-}
-.btn--primary:hover { background: var(--accent-soft); transform: translateY(-2px); }
-.btn--ghost {
-  border: 1px solid var(--line);
-  color: var(--bone);
-  background: transparent;
-}
-.btn--ghost:hover { border-color: var(--bone); transform: translateY(-2px); }
+/* ---------- Botón (sin uso en HTML actual — eliminado; reemplazado por .hero__btn y .price-card__cta) ---------- */
+/* .btn, .btn--primary, .btn--ghost eliminados — no referencia en HTML */
 
 .hero__btn {
   display: inline-flex;
@@ -458,7 +452,7 @@ body.is-anim .preloader { visibility: hidden; }
   transition: background 0.25s var(--ease), border-color 0.25s var(--ease), transform 0.25s var(--ease);
   min-height: 46px;
 }
-.hero__btn--primary { background: #6900ff; color: #fff; }
+.hero__btn--primary { background: var(--accent); color: #fff; }
 .hero__btn--primary:hover { background: #7a1bff; transform: translateY(-2px); }
 .hero__btn--ghost { border: 1px solid rgba(255, 255, 255, 0.2); color: #fff; background: transparent; }
 .hero__btn--ghost:hover { border-color: rgba(255, 255, 255, 0.5); transform: translateY(-2px); }
@@ -564,6 +558,49 @@ body.is-anim .preloader { visibility: hidden; }
   margin: 0 0 var(--space-3);
 }
 .about__copy > p { color: var(--bone-dim); margin: 0 0 var(--space-3); max-width: 56ch; }
+.about__tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+.about__tool {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--bone-dim);
+  background: rgba(255, 255, 255, 0.03);
+  transition: border-color 0.3s var(--ease), color 0.3s var(--ease);
+}
+.about__tool:hover {
+  border-color: var(--accent);
+  color: var(--bone);
+}
+.about__portrait {
+  position: relative;
+  width: min(100%, 320px);
+  margin-inline: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.about__portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about__portrait-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  opacity: 0.4;
+  pointer-events: none;
+}
 .about__mark {
   margin: 0;
   text-align: center;
@@ -1006,6 +1043,117 @@ body.is-anim .preloader { visibility: hidden; }
   box-shadow: 0 0 0 1px rgba(105, 0, 255, 0.35), 0 16px 40px -20px rgba(105, 0, 255, 0.4);
   transform: translateY(-2px);
 }
+
+.tcard__avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+}
+
+/* ---------- FAQ (acordeón) ---------- */
+.faq-list {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.faq-item {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  overflow: hidden;
+  transition: border-color 0.3s var(--ease);
+}
+
+.faq-item[open] {
+  border-color: rgba(105, 15, 255, 0.3);
+}
+
+.faq-item__q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--bone);
+  list-style: none;
+  transition: color 0.2s var(--ease);
+}
+
+.faq-item__q::-webkit-details-marker { display: none; }
+.faq-item__q::marker { display: none; content: ""; }
+
+.faq-item__q:hover { color: var(--accent); }
+
+.faq-item__icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.faq-item__icon::before,
+.faq-item__icon::after {
+  content: "";
+  position: absolute;
+  background: var(--bone-dim);
+  border-radius: 1px;
+  transition: transform 0.3s var(--ease), background 0.3s var(--ease);
+}
+
+.faq-item__icon::before {
+  top: 50%;
+  left: 3px;
+  right: 3px;
+  height: 2px;
+  transform: translateY(-50%);
+}
+
+.faq-item__icon::after {
+  left: 50%;
+  top: 3px;
+  bottom: 3px;
+  width: 2px;
+  transform: translateX(-50%);
+}
+
+.faq-item[open] .faq-item__icon::after {
+  transform: translateX(-50%) rotate(90deg);
+}
+
+.faq-item[open] .faq-item__icon::before,
+.faq-item[open] .faq-item__icon::after {
+  background: var(--accent);
+}
+
+.faq-item__a {
+  padding: 0 var(--space-4) var(--space-3);
+  color: var(--bone-dim);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.faq-item__a p { margin: 0 0 var(--space-2); }
+.faq-item__a p:last-child { margin-bottom: 0; }
+.faq-item__a strong { color: var(--bone); font-weight: 600; }
 
 /* ---------- Contacto ---------- */
 .section--contact {

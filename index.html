@@ -6,6 +6,12 @@
   <title>Tako — Diseñador Gráfico · Identidad de Marca y Diseño Visual</title>
   <meta name="description" content="Tako es un estudio unipersonal de diseño gráfico: identidades de marca, empaques y sistemas editoriales que mueven a las personas." />
   <meta name="theme-color" content="#0B0B0E" />
+  <meta property="og:title" content="Tako — Diseñador Gráfico · Identidad de Marca y Diseño Visual" />
+  <meta property="og:description" content="Estudio unipersonal de diseño gráfico: identidades de marca, empaques y sistemas editoriales que mueven a las personas." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://carls8999.github.io/Page-Tako/" />
+  <meta property="og:image" content="assets/Logo_Horizontal_blanco.png" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="icon" type="image/png" href="assets/favicon-16x16.png" />
 
@@ -45,7 +51,7 @@
   <header class="nav" id="nav">
     <div class="nav__inner container">
       <a class="nav__brand" href="#top" aria-label="Tako — volver arriba">
-        <img class="nav__logo" src="assets/Logo_Horizontal_blanco.png" alt="Tako — logo horizontal" width="1800" height="573" />
+        <img class="nav__logo" src="assets/Logo_Horizontal_blanco.png" alt="Tako — logo horizontal" width="200" height="64" />
       </a>
 
       <nav class="nav__links" aria-label="Principal">
@@ -53,7 +59,8 @@
         <a href="#services">Servicios</a>
         <a href="#about">Estudio</a>
         <a href="#process">Proceso</a>
-        <a class="nav__cta" href="#contact">Empezar un proyecto</a>
+        <a href="#faq">FAQ</a>
+        <a class="nav__cta" href="#contact">Hablemos de tu proyecto</a>
       </nav>
 
       <button class="nav__toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menú">
@@ -64,12 +71,13 @@
 
   <!-- Menú móvil -->
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-    <nav class="mobile-menu__nav" aria-label="Móvil">
+    <nav class="mobile-menu__nav" aria-label="Navegación móvil">
       <a href="#work">Trabajo</a>
       <a href="#services">Servicios</a>
       <a href="#about">Estudio</a>
       <a href="#process">Proceso</a>
-      <a href="#contact">Empezar un proyecto</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Hablemos de tu proyecto</a>
     </nav>
     <p class="mobile-menu__contact">
       <a href="mailto:carlosrodriguez8999@gmail.com">carlosrodriguez8999@gmail.com</a>
@@ -87,31 +95,31 @@
       </div>
 
       <div class="hero__content container">
-        <span class="hero__pill">Soluciones Creativas e Innovadoras</span>
+        <span class="hero__pill">Identidad · Empaque · Motion</span>
 
         <h1 class="hero__title">
-          <span class="hero__title-line">Revolucionando el diseño</span>
-          <span class="hero__title-line hero__title-line--grad">con Animación y Motion</span>
+          <span class="hero__title-line">Tu marca, ocho brazos.</span>
+          <span class="hero__title-line hero__title-line--grad">Identidad, empaque, motion — todo bajo un mismo pulpo.</span>
         </h1>
 
-        <p class="hero__sub">Lleva tu marca al siguiente nivel con experiencias visuales de alto impacto.</p>
+        <p class="hero__sub">Diseño gráfico directo y sin rodeos. Menos reuniones, más decisiones, y un proceso que mantiene la idea nítida desde el primer boceto.</p>
 
         <div class="hero__trust">
           <div class="hero__avatars" aria-hidden="true">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="" loading="lazy" width="48" height="48" />
-            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="" loading="lazy" width="48" height="48" />
-            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="" loading="lazy" width="48" height="48" />
-            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="" loading="lazy" width="48" height="48" />
+            <span class="hero__avatar-initial">S</span>
+            <span class="hero__avatar-initial">T</span>
+            <span class="hero__avatar-initial">O</span>
+            <span class="hero__avatar-initial">C</span>
           </div>
-          <span>Con la confianza de más de 79 clientes</span>
+          <span>79 proyectos entregados para marcas que crecen</span>
         </div>
 
         <div class="hero__actions">
           <a class="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-[#6900FF] focus:ring-offset-2 focus:ring-offset-[#030508]" href="#contact">
           <span class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#6900FF_50%,#E2CBFF_100%)]"></span>
-          <span class="relative inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#030508] px-8 py-1 text-sm font-medium text-white backdrop-blur-3xl">Empezar</span>
+          <span class="relative inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-[#030508] px-8 py-1 text-sm font-medium text-white backdrop-blur-3xl">Hablemos de tu proyecto</span>
         </a>
-          <a class="hero__btn hero__btn--ghost" href="#work">Saber más</a>
+          <a class="hero__btn hero__btn--ghost" href="#work">Ver el trabajo</a>
         </div>
       </div>
 
@@ -145,20 +153,16 @@
       <div class="container">
         <header class="section__head">
           <p class="eyebrow reveal">Trabajo seleccionado</p>
-          <div class="section__row">
             <h2 class="h-display reveal">El trabajo<br />que habla solo.</h2>
-            <p class="section__lede reveal">Un puñado de proyectos recientes — cada uno una identidad completa, creada para ser vista, recordada y repetida.</p>
-          </div>
+            <p class="section__lede reveal">Proyectos recientes — cada uno una identidad completa, creada para ser vista, recordada y repetida.</p>
         </header>
-
-        </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[350px] max-w-7xl mx-auto px-6">
         <!-- Motion Graphics - vertical -->
         <a href="#contact" aria-label="Tech Talent — Motion &amp; Reels" class="relative block overflow-hidden rounded-[2.5rem] bg-[#0A0D14] border border-white/10 group cursor-pointer shadow-2xl shadow-black/50 md:col-span-1 md:row-span-2 transition-colors duration-500 group-hover:border-[#6900FF]/50">
           <video class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/Motion_Graphics.mp4" autoplay loop muted playsinline></video>
           <div class="absolute inset-0 bg-gradient-to-t from-[#030508] via-[#030508]/40 to-transparent transition-opacity duration-500 group-hover:opacity-60"></div>
-          <div class="absolute bottom-0 left-0 w-full p-8 translate-y-8 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+          <div class="absolute bottom-0 left-0 w-full p-8 md:translate-y-8 md:opacity-0 transition-all duration-500 md:group-hover:translate-y-0 md:group-hover:opacity-100">
             <span class="inline-flex items-center rounded-full bg-[#6900FF]/20 px-4 py-1 text-xs font-medium uppercase tracking-wider text-[#6900FF]">Motion &amp; Reels</span>
             <h3 class="mt-3 text-2xl font-bold text-white">Tech Talent</h3>
           </div>
@@ -168,7 +172,7 @@
         <a href="#contact" aria-label="Ormi Black — Branding" class="relative block overflow-hidden rounded-[2.5rem] bg-[#0A0D14] border border-white/10 group cursor-pointer shadow-2xl shadow-black/50 md:col-span-1 md:row-span-1 transition-colors duration-500 group-hover:border-[#6900FF]/50">
           <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/work/Mockup-franela-ormi-black.jpg" alt="Mockup de franela — Ormi Black" loading="lazy" width="800" height="800" />
           <div class="absolute inset-0 bg-gradient-to-t from-[#030508] via-[#030508]/40 to-transparent transition-opacity duration-500 group-hover:opacity-60"></div>
-          <div class="absolute bottom-0 left-0 w-full p-8 translate-y-8 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+          <div class="absolute bottom-0 left-0 w-full p-8 md:translate-y-8 md:opacity-0 transition-all duration-500 md:group-hover:translate-y-0 md:group-hover:opacity-100">
             <span class="inline-flex items-center rounded-full bg-[#6900FF]/20 px-4 py-1 text-xs font-medium uppercase tracking-wider text-[#6900FF]">Branding</span>
             <h3 class="mt-3 text-2xl font-bold text-white">Ormi Black</h3>
           </div>
@@ -178,9 +182,39 @@
         <a href="#contact" aria-label="CJ Constructora — Identidad Visual" class="relative block overflow-hidden rounded-[2.5rem] bg-[#0A0D14] border border-white/10 group cursor-pointer shadow-2xl shadow-black/50 md:col-span-2 md:row-span-1 transition-colors duration-500 group-hover:border-[#6900FF]/50">
           <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/work/Identidad_Visual_Cj.jpg" alt="Identidad visual — CJ Constructora" loading="lazy" width="1200" height="700" />
           <div class="absolute inset-0 bg-gradient-to-t from-[#030508] via-[#030508]/40 to-transparent transition-opacity duration-500 group-hover:opacity-60"></div>
-          <div class="absolute bottom-0 left-0 w-full p-8 translate-y-8 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+          <div class="absolute bottom-0 left-0 w-full p-8 md:translate-y-8 md:opacity-0 transition-all duration-500 md:group-hover:translate-y-0 md:group-hover:opacity-100">
             <span class="inline-flex items-center rounded-full bg-[#6900FF]/20 px-4 py-1 text-xs font-medium uppercase tracking-wider text-[#6900FF]">Identidad Visual</span>
             <h3 class="mt-3 text-2xl font-bold text-white">CJ Constructora</h3>
+          </div>
+        </a>
+
+        <!-- Lactojoy - Empaque -->
+        <a href="#contact" aria-label="Lactojoy — Empaque" class="relative block overflow-hidden rounded-[2.5rem] bg-[#0A0D14] border border-white/10 group cursor-pointer shadow-2xl shadow-black/50 md:col-span-1 md:row-span-1 transition-colors duration-500 group-hover:border-[#6900FF]/50">
+          <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/work/context-specific-branding-lactojoy.jpg" alt="Empaque — Lactojoy" loading="lazy" width="800" height="800" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#030508] via-[#030508]/40 to-transparent transition-opacity duration-500 group-hover:opacity-60"></div>
+          <div class="absolute bottom-0 left-0 w-full p-8 md:translate-y-8 md:opacity-0 transition-all duration-500 md:group-hover:translate-y-0 md:group-hover:opacity-100">
+            <span class="inline-flex items-center rounded-full bg-[#6900FF]/20 px-4 py-1 text-xs font-medium uppercase tracking-wider text-[#6900FF]">Empaque</span>
+            <h3 class="mt-3 text-2xl font-bold text-white">Lactojoy</h3>
+          </div>
+        </a>
+
+        <!-- La Colmena - Identidad Visual -->
+        <a href="#contact" aria-label="La Colmena — Identidad Visual" class="relative block overflow-hidden rounded-[2.5rem] bg-[#0A0D14] border border-white/10 group cursor-pointer shadow-2xl shadow-black/50 md:col-span-1 md:row-span-1 transition-colors duration-500 group-hover:border-[#6900FF]/50">
+          <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/work/Identidad_visual_La_colmena.jpg" alt="Identidad visual — La Colmena" loading="lazy" width="800" height="800" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#030508] via-[#030508]/40 to-transparent transition-opacity duration-500 group-hover:opacity-60"></div>
+          <div class="absolute bottom-0 left-0 w-full p-8 md:translate-y-8 md:opacity-0 transition-all duration-500 md:group-hover:translate-y-0 md:group-hover:opacity-100">
+            <span class="inline-flex items-center rounded-full bg-[#6900FF]/20 px-4 py-1 text-xs font-medium uppercase tracking-wider text-[#6900FF]">Identidad Visual</span>
+            <h3 class="mt-3 text-2xl font-bold text-white">La Colmena</h3>
+          </div>
+        </a>
+
+        <!-- Patricia - Identidad Visual -->
+        <a href="#contact" aria-label="Patricia — Identidad Visual" class="relative block overflow-hidden rounded-[2.5rem] bg-[#0A0D14] border border-white/10 group cursor-pointer shadow-2xl shadow-black/50 md:col-span-2 md:row-span-1 transition-colors duration-500 group-hover:border-[#6900FF]/50">
+          <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/work/Identidad_visual_Patricia.jpg" alt="Identidad visual — Patricia" loading="lazy" width="1200" height="700" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#030508] via-[#030508]/40 to-transparent transition-opacity duration-500 group-hover:opacity-60"></div>
+          <div class="absolute bottom-0 left-0 w-full p-8 md:translate-y-8 md:opacity-0 transition-all duration-500 md:group-hover:translate-y-0 md:group-hover:opacity-100">
+            <span class="inline-flex items-center rounded-full bg-[#6900FF]/20 px-4 py-1 text-xs font-medium uppercase tracking-wider text-[#6900FF]">Identidad Visual</span>
+            <h3 class="mt-3 text-2xl font-bold text-white">Patricia</h3>
           </div>
         </a>
       </div>
@@ -201,7 +235,7 @@
             <span class="pointer-events-none absolute -bottom-24 -right-24 h-60 w-60 rounded-full bg-[#6900FF]/20 blur-[100px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
 
             <h3 class="text-2xl font-bold text-white mb-2">Motion Graphics &amp; Reels</h3>
-            <p class="text-sm text-gray-400">Animaciones verticales que retienen la atención</p>
+            <p class="text-sm text-gray-400">Reels y animaciones verticales que retienen la atención en redes.</p>
 
             <!-- Teléfono abstracto iluminado en morado -->
             <div class="absolute -right-8 bottom-6 w-48 rotate-6 rounded-[2rem] border border-white/15 bg-[#0b0b0e]/70 p-3 shadow-[0_0_80px_rgba(105,0,255,0.45)] backdrop-blur-md transition-transform duration-500 group-hover:-rotate-2 group-hover:scale-105">
@@ -263,7 +297,7 @@
           <article class="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-[2rem] overflow-hidden p-8 flex flex-col group shadow-2xl shadow-black/50 md:col-span-2 md:row-span-1 reveal">
             <span class="pointer-events-none absolute -bottom-24 -right-24 h-60 w-60 rounded-full bg-[#6900FF]/20 blur-[100px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
 
-            <h3 class="text-2xl font-bold text-white mb-2">Carruseles B2B &amp; Redes</h3>
+            <h3 class="text-2xl font-bold text-white mb-2">Carruseles B2B y Redes</h3>
             <p class="text-sm text-gray-400">Diseño estratégico para potenciar tu presencia corporativa</p>
 
             <!-- Mazo de diapositivas carrusel (esquina inferior derecha) -->
@@ -290,14 +324,22 @@
 
         <div class="about__grid">
           <div class="about__copy">
-            <p class="about__lead reveal">Tako significa pulpo. Cada proyecto se trata como un ser vivo: se estudia, se moldea y se lanza al mundo con intención.</p>
-            <p class="reveal">Más de seis años creando marcas para fundadores, equipos pequeños y personas que cuidan los detalles. Trabajo ágil y directo: menos reuniones, más decisiones, y un proceso que mantiene la idea nítida desde el primer boceto hasta el archivo final.</p>
+            <p class="about__lead reveal">Soy Carlos Rodríguez, diseño bajo el nombre Tako. Todo empezó porque me gusta resolver problemas visuales de forma directa — sin rodeos, sin burocracia, sin archivos que nadie entiende.</p>
+            <p class="reveal">Trabajo con fundadores, equipos pequeños y personas que cuidan los detalles. Mi proceso es ágil: menos reuniones, más decisiones. Cada proyecto se trata como un ser vivo — se estudia, se moldea y se lanza al mundo con intención.</p>
+            <p class="reveal">Guárico, Venezuela. Desde aquí diseño para marcas que crecen.</p>
+            <div class="about__tools reveal">
+              <span class="about__tool">Figma</span>
+              <span class="about__tool">Illustrator</span>
+              <span class="about__tool">Photoshop</span>
+              <span class="about__tool">After Effects</span>
+              <span class="about__tool">Blender</span>
+            </div>
           </div>
 
-          <figure class="about__mark reveal">
-            <img src="assets/Isotipo_Tako_transparente.png" alt="Isotipo de Tako — la marca del pulpo" width="2042" height="1560" loading="lazy" />
-            <figcaption>Herramientas: Figma · Illustrator · Photoshop · After Effects · Blender</figcaption>
-          </figure>
+          <div class="about__portrait reveal">
+            <img src="assets/profile.png" alt="Carlos Rodríguez — fundador de Tako" width="400" height="400" loading="lazy" />
+            <span class="about__portrait-ring" aria-hidden="true"></span>
+          </div>
         </div>
       </div>
     </section>
@@ -364,10 +406,10 @@
           <span class="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-white/80 backdrop-blur">
             Inversión
           </span>
-          <h2 class="h-display reveal" style="font-size:clamp(2rem,6vw,3.6rem)">
+          <h2 class="h-display h-display--pricing reveal">
             Precios <span class="text-[#6900FF]">sin sorpresas</span>
           </h2>
-          <p class="section__lede reveal" style="color:#a3a3a3">Paquetes claros para llevar tu marca al siguiente nivel.</p>
+          <p class="section__lede section__lede--muted reveal">Paquetes claros para llevar tu marca al siguiente nivel.</p>
         </header>
 
         <div class="price-grid">
@@ -394,7 +436,7 @@
                 </li>
                 <li class="price-card__feature">
                   <svg class="price-card__check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  Paleta Básica
+                  Paleta de colores
                 </li>
                 <li class="price-card__feature">
                   <svg class="price-card__check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -422,7 +464,7 @@
               <ul class="price-card__features">
                 <li class="price-card__feature price-card__feature--highlight">
                   <svg class="price-card__check price-card__check--accent" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  Submarca/Isotipo
+                  Submarca e isotipo
                 </li>
                 <li class="price-card__feature price-card__feature--highlight">
                   <svg class="price-card__check price-card__check--accent" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -476,24 +518,101 @@
       </div>
     </section>
 
+    <!-- FAQ -->
+    <section class="section section--tight" id="faq">
+      <div class="container">
+        <header class="section__head section__head--center">
+          <span class="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-white/80 backdrop-blur">
+            Preguntas Frecuentes
+          </span>
+          <h2 class="h-display h-display--pricing reveal">
+            Dudas <span class="text-[#6900FF]">comunes</span>
+          </h2>
+        </header>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary class="faq-item__q">
+              <span>¿Qué incluye cada paquete?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__a">
+              <p><strong>Esencial ($25):</strong> Un diseño único, 2 revisiones, paleta de colores básica y archivos PNG/JPG/PDF. Ideal para un logo o pieza suelta.</p>
+              <p><strong>Logo + Branding ($60):</strong> Todo lo esencial, más submarca/isotipo, tarjeta de presentación, revisiones ilimitadas y 3 mockups premium.</p>
+              <p><strong>PRO + Guía ($100):</strong> Todo lo de Branding, más papelería corporativa completa, manual de identidad visual (PDF) y exportación web y redes.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-item__q">
+              <span>¿Cuánto tarda cada proyecto?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__a">
+              <p>El paquete Esencial se entrega en 4 a 5 días. Logo + Branding toma 7 a 10 días. PRO + Guía necesita 8 a 12 días. Los tiempos dependen de la complejidad y de cuán rápido recibamos tu feedback.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-item__q">
+              <span>¿Cómo funciona el proceso de trabajo?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__a">
+              <p>Cuatro pasos: (1) Descubrimos tu marca y tu mercado. (2) Definimos estrategia y territorio visual. (3) Diseñamos en rondas apretadas con dos direcciones. (4) Entregamos archivos organizados y una guía para que tu equipo use la marca sin depender de mí.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-item__q">
+              <span>¿Qué pasa si no me gusta el diseño?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__a">
+              <p>El paquete Esencial incluye 2 revisiones. Logo + Branding y PRO incluyen revisiones ilimitadas — hasta que estés satisfecho. Si después de las revisiones sientes que no encajamos, no hay compromiso: pagas solo lo trabajado.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-item__q">
+              <span>¿Aceptas pagos en cuotas?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__a">
+              <p>Sí. Para Logo + Branding y PRO + Guía puedo dividir el pago en 2 cuotas: 50% al inicio y 50% a la entrega. Para el paquete Esencial, el pago es completo antes de comenzar.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-item__q">
+              <span>¿Trabajas con clientes fuera de Venezuela?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__a">
+              <p>Sí, trabajo con clientes de cualquier país. Los precios están en dólares para facilitar transacciones internacionales. La comunicación es por email o videollamada, y el proceso es el mismo sin importar la zona horaria.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <!-- Testimonios -->
-    <section class="section testimonials" id="testimonials" style="background:#030508">
+    <section class="section testimonials" id="testimonials">
       <div class="container">
         <header class="section__head section__head--center">
           <span class="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-white/80 backdrop-blur">
             Testimonios
           </span>
-          <h2 class="h-display reveal" style="font-size:clamp(2rem,6vw,3.6rem)">
+          <h2 class="h-display h-display--pricing reveal">
             Nuestros Clie<span class="text-[#6900FF]">ntes</span>
           </h2>
-          <p class="section__lede reveal" style="color:#a3a3a3">Marcas y creadores que han transformado su identidad visual con nosotros.</p>
         </header>
       </div>
 
       <div class="container tgrid grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 px-4 md:px-12 pb-12 [-webkit-mask-image:radial-gradient(ellipse_at_center,black_60%,transparent_100%)] [mask-image:radial-gradient(ellipse_at_center,black_60%,transparent_100%)]">
         <article class="tcard rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 overflow-hidden shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.1)]">
           <div class="flex items-center gap-3">
-            <img class="h-12 w-12 rounded-full object-cover" src="https://randomuser.me/api/portraits/women/44.jpg" alt="" loading="lazy" width="48" height="48" />
+            <span class="tcard__avatar" aria-hidden="true">S</span>
             <div class="min-w-0">
               <strong class="block text-base font-semibold text-white">Syxcel</strong>
               <span class="text-sm text-[#8b90a8]">Real Estate</span>
@@ -504,7 +623,7 @@
 
         <article class="tcard rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 overflow-hidden shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.1)]">
           <div class="flex items-center gap-3">
-            <img class="h-12 w-12 rounded-full object-cover" src="https://randomuser.me/api/portraits/men/32.jpg" alt="" loading="lazy" width="48" height="48" />
+            <span class="tcard__avatar" aria-hidden="true">T</span>
             <div class="min-w-0">
               <strong class="block text-base font-semibold text-white">Tecno Computer</strong>
               <span class="text-sm text-[#8b90a8]">Tecnología B2B</span>
@@ -515,7 +634,7 @@
 
         <article class="tcard rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 overflow-hidden shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.1)]">
           <div class="flex items-center gap-3">
-            <img class="h-12 w-12 rounded-full object-cover" src="https://randomuser.me/api/portraits/men/75.jpg" alt="" loading="lazy" width="48" height="48" />
+            <span class="tcard__avatar" aria-hidden="true">O</span>
             <div class="min-w-0">
               <strong class="block text-base font-semibold text-white">Ormi Black</strong>
               <span class="text-sm text-[#8b90a8]">Artista Urbano</span>
@@ -526,7 +645,7 @@
 
         <article class="tcard rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 overflow-hidden shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.1)]">
           <div class="flex items-center gap-3">
-            <img class="h-12 w-12 rounded-full object-cover" src="https://randomuser.me/api/portraits/women/68.jpg" alt="" loading="lazy" width="48" height="48" />
+            <span class="tcard__avatar" aria-hidden="true">TT</span>
             <div class="min-w-0">
               <strong class="block text-base font-semibold text-white">TechTalent</strong>
               <span class="text-sm text-[#8b90a8]">Recursos Humanos</span>
@@ -537,7 +656,7 @@
 
         <article class="tcard rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 overflow-hidden shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.1)]">
           <div class="flex items-center gap-3">
-            <img class="h-12 w-12 rounded-full object-cover" src="https://randomuser.me/api/portraits/men/41.jpg" alt="" loading="lazy" width="48" height="48" />
+            <span class="tcard__avatar" aria-hidden="true">CJ</span>
             <div class="min-w-0">
               <strong class="block text-base font-semibold text-white">CJ Constructora</strong>
               <span class="text-sm text-[#8b90a8]">Construcción</span>
@@ -548,7 +667,7 @@
 
         <article class="tcard rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 overflow-hidden shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.1)]">
           <div class="flex items-center gap-3">
-            <img class="h-12 w-12 rounded-full object-cover" src="https://randomuser.me/api/portraits/women/65.jpg" alt="" loading="lazy" width="48" height="48" />
+            <span class="tcard__avatar" aria-hidden="true">FD</span>
             <div class="min-w-0">
               <strong class="block text-base font-semibold text-white">Familia Dos Santos</strong>
               <span class="text-sm text-[#8b90a8]">Gastronomía</span>
@@ -565,7 +684,7 @@
         <header class="section__head section__head--center">
           <p class="eyebrow reveal">Contacto</p>
           <h2 class="h-display reveal">Hagamos algo que<br />mueva a las personas.</h2>
-          <p class="section__lede reveal">Cuéntame qué estás construyendo. Suele responder el mismo día — <a class="link" href="mailto:carlosrodriguez8999@gmail.com">carlosrodriguez8999@gmail.com</a></p>
+          <p class="section__lede reveal">Cuéntame qué estás construyendo. Respondo el mismo día — <a class="link" href="mailto:carlosrodriguez8999@gmail.com">carlosrodriguez8999@gmail.com</a></p>
         </header>
       </div>
 
@@ -590,26 +709,13 @@
               <span class="text-sm text-gray-400">Disponibilidad</span>
               <span class="inline-flex items-center gap-2.5 text-white/90">
                 <span class="inline-block h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
-                Reservando Q3 2026
+                Abierto para proyectos — Q3 2026
               </span>
             </li>
           </ul>
 
           <h3 class="mt-10 text-xs font-semibold uppercase tracking-[0.22em] text-gray-400">Redes</h3>
-          <div class="mt-4 flex flex-wrap gap-3" aria-label="Redes sociales">
-            <a href="#" aria-label="Instagram" class="inline-flex rounded-xl border border-white/10 bg-white/5 p-3 text-gray-300 transition-all hover:border-[#6900FF]/50 hover:bg-[#6900FF]/20">
-              <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg>
-            </a>
-            <a href="#" aria-label="Behance" class="inline-flex rounded-xl border border-white/10 bg-white/5 p-3 text-gray-300 transition-all hover:border-[#6900FF]/50 hover:bg-[#6900FF]/20">
-              <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5"><path d="M2 7h7a3 3 0 0 1 0 6H2V7Zm0 6h8a3 3 0 0 1 0 6H2v-6Zm14-6h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15 9.5a3 3 0 0 1 5 2.3V13h-5a3 3 0 0 1 0-3.5Z" stroke="currentColor" stroke-width="1.6"/></svg>
-            </a>
-            <a href="#" aria-label="Dribbble" class="inline-flex rounded-xl border border-white/10 bg-white/5 p-3 text-gray-300 transition-all hover:border-[#6900FF]/50 hover:bg-[#6900FF]/20">
-              <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M5 8c5-3 12-1 14 4M3.5 14c6-2 10 1 11 6M15 3.5c-3 5-6 8-11 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-            </a>
-            <a href="#" aria-label="LinkedIn" class="inline-flex rounded-xl border border-white/10 bg-white/5 p-3 text-gray-300 transition-all hover:border-[#6900FF]/50 hover:bg-[#6900FF]/20">
-              <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M8 11v5M8 8v.01M12 16v-5m0 0v-1a2.5 2.5 0 0 1 5 0v1v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-            </a>
-          </div>
+          <p class="mt-4 text-sm text-gray-500">Próximamente en redes sociales.</p>
         </div>
 
         <!-- Formulario -->
@@ -645,10 +751,10 @@
               <label class="mb-1 text-xs font-semibold uppercase tracking-[0.12em] text-gray-400" for="fBudget">Presupuesto</label>
               <select class="field__input w-full rounded-xl border border-white/10 bg-[#0A0D14]/50 px-4 py-3 text-white backdrop-blur-md transition-all focus:border-[#6900FF] focus:outline-none focus:ring-2 focus:ring-[#6900FF]/50" id="fBudget" name="budget" required>
                 <option value="" selected>Elige una opción…</option>
-                <option>Menos de $2.000</option>
-                <option>$2.000 – $5.000</option>
-                <option>$5.000 – $10.000</option>
-                <option>Más de $10.000</option>
+                <option>Menos de $50</option>
+                <option>$50 – $100</option>
+                <option>$100 o más</option>
+                <option>Paquete especial — consultarme</option>
               </select>
               <p class="field__error" data-error-for="budget"></p>
             </div>
@@ -676,7 +782,7 @@
       <div class="border-t border-white/10 pt-8 mt-20">
         <div class="flex flex-col items-center justify-between gap-6 text-gray-400 md:flex-row">
           <a class="inline-flex items-center gap-2.5 transition-opacity hover:opacity-80" href="#top" aria-label="Tako — volver arriba">
-            <img class="h-10 w-auto" src="assets/Logo_Horizontal_blanco.png" alt="Tako — logo horizontal" width="1800" height="573" loading="lazy" />
+            <img class="h-10 w-auto" src="assets/Logo_Horizontal_blanco.png" alt="Tako — logo horizontal" width="200" height="64" loading="lazy" />
           </a>
 
           <nav class="flex flex-wrap justify-center gap-x-8 gap-y-3" aria-label="Pie de página">
@@ -684,6 +790,7 @@
             <a class="text-sm transition-colors hover:text-[#6900FF]" href="#services">Servicios</a>
             <a class="text-sm transition-colors hover:text-[#6900FF]" href="#about">Estudio</a>
             <a class="text-sm transition-colors hover:text-[#6900FF]" href="#process">Proceso</a>
+            <a class="text-sm transition-colors hover:text-[#6900FF]" href="#faq">FAQ</a>
             <a class="text-sm transition-colors hover:text-[#6900FF]" href="#contact">Contacto</a>
           </nav>
 
