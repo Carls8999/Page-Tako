@@ -170,7 +170,7 @@ body::after {
 .preloader__word {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(3rem, 10vw, 7rem);
+  font-size: clamp(3rem, 10vw, 6rem);
   letter-spacing: -0.04em;
   line-height: 1;
 }
@@ -244,7 +244,7 @@ body.is-anim .preloader { visibility: hidden; }
   color: #fff;
   background: var(--accent);
   padding: 10px 18px;
-  border-radius: var(--radius);
+  border-radius: 999px;
   font-weight: 600;
 }
 .nav__links .nav__cta:hover { background: var(--accent-soft); color: #fff; }
@@ -646,7 +646,7 @@ body.is-anim .preloader { visibility: hidden; }
 .process__card {
   position: relative;
   border: 1px solid var(--line);
-  border-radius: var(--radius);
+  border-radius: 16px;
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -780,7 +780,7 @@ body.is-anim .preloader { visibility: hidden; }
   }
 
   .process__num-bg {
-    font-size: clamp(5rem, 6vw, 7rem);
+    font-size: clamp(5rem, 6vw, 6rem);
     top: -12px;
     right: -8px;
   }
