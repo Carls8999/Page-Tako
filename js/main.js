@@ -169,11 +169,11 @@
     var submitBtn = document.getElementById("formSubmit");
 
     var fields = [
-      { input: document.getElementById("fName"), err: "Cuéntame tu nombre." },
-      { input: document.getElementById("fEmail"), err: "Un email válido para poder responderte." },
-      { input: document.getElementById("fType"), err: "Elige el tipo de proyecto." },
-      { input: document.getElementById("fBudget"), err: "Elige un rango de presupuesto." },
-      { input: document.getElementById("fMessage"), err: "Un par de líneas sobre el proyecto ayudan." }
+      { input: document.getElementById("fName"), err: "El nombre es obligatorio." },
+      { input: document.getElementById("fEmail"), err: "Ingresa un email válido." },
+      { input: document.getElementById("fType"), err: "Selecciona el tipo de proyecto." },
+      { input: document.getElementById("fBudget"), err: "Selecciona un rango de presupuesto." },
+      { input: document.getElementById("fMessage"), err: "Descríbete brevemente." }
     ];
     var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -190,7 +190,7 @@
       var v = (field.input.value || "").trim();
       var message = "";
       if (!v) message = field.err;
-      else if (field.input === fields[1].input && !emailRe.test(v)) message = "Ese email no parece correcto.";
+      else if (field.input === fields[1].input && !emailRe.test(v)) message = "El email no parece válido.";
       setError(field, message);
       return !message;
     }
@@ -206,7 +206,7 @@
       e.preventDefault();
       var ok = fields.every(validateField);
       if (!ok) {
-        statusEl.textContent = "Hay algunos campos que necesitan tu atención.";
+        statusEl.textContent = "Completa los campos señalados.";
         statusEl.className = "form__status is-err";
         var firstBad = form.querySelector(".field--invalid .field__input");
         if (firstBad) firstBad.focus();
@@ -214,12 +214,12 @@
       }
       form.classList.add("is-sending");
       submitBtn.disabled = true;
-      statusEl.textContent = "Enviando…";
+      statusEl.textContent = "Enviando consulta…";
       statusEl.className = "form__status";
       window.setTimeout(function () {
         form.classList.remove("is-sending");
         submitBtn.disabled = false;
-        statusEl.textContent = "Mensaje enviado — te responderé en el día.";
+        statusEl.textContent = "Mensaje enviado — respondo en 24 horas.";
         statusEl.className = "form__status is-ok";
         form.reset();
         fields.forEach(function (f) {
