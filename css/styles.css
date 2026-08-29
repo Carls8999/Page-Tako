@@ -1221,6 +1221,7 @@ select.field__input {
   .tcard:hover { transform: none; box-shadow: none; }
   .process__card:hover { transform: none; }
   .price-card:hover { transform: none; }
+  .hero__video { display: none; }
   * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
 

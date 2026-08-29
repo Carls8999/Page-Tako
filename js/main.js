@@ -166,7 +166,6 @@
   var form = document.getElementById("contactForm");
   if (form) {
     var statusEl = document.getElementById("formStatus");
-    var submitBtn = document.getElementById("formSubmit");
 
     var fields = [
       { input: document.getElementById("fName"), err: "El nombre es obligatorio." },
@@ -212,21 +211,15 @@
         if (firstBad) firstBad.focus();
         return;
       }
-      form.classList.add("is-sending");
-      submitBtn.disabled = true;
-      statusEl.textContent = "Enviando consulta…";
-      statusEl.className = "form__status";
-      window.setTimeout(function () {
-        form.classList.remove("is-sending");
-        submitBtn.disabled = false;
-        statusEl.textContent = "Mensaje enviado — respondo en 24 horas.";
-        statusEl.className = "form__status is-ok";
-        form.reset();
-        fields.forEach(function (f) {
-          f.input.closest(".field").classList.remove("field--invalid");
-          f.input.removeAttribute("aria-invalid");
-        });
-      }, 1200);
+      var nameVal = document.getElementById("fName").value.trim();
+      var emailVal = document.getElementById("fEmail").value.trim();
+      var typeVal = document.getElementById("fType").value;
+      var budgetVal = document.getElementById("fBudget").value;
+      var messageVal = document.getElementById("fMessage").value.trim();
+      var subject = "Nuevo encargo desde la web — Tako";
+      var body = "Nombre: " + nameVal + "\nEmail: " + emailVal + "\nTipo de proyecto: " + typeVal + "\nPresupuesto: " + budgetVal + "\n\n" + messageVal;
+      var mailtoUrl = "mailto:carlosrodriguez8999@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+      window.location.href = mailtoUrl;
     });
   }
 

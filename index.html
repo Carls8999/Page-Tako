@@ -26,7 +26,14 @@
     tailwind.config = { corePlugins: { preflight: false } };
   </script>
 </head>
-<body>
+  <body>
+    <noscript>
+      <style>
+        .preloader { display: none; }
+        .reveal, .eyebrow { opacity: 1; transform: none; }
+        .is-loaded .preloader { display: none; }
+      </style>
+    </noscript>
   <!-- Fondo decorativo: orbes de luz para potenciar el glassmorphism -->
   <div class="orb-bg fixed inset-0 z-[-2] pointer-events-none overflow-hidden" aria-hidden="true">
     <div class="orb absolute w-[620px] h-[620px] rounded-full bg-[#6900FF]/15 blur-[128px] -top-40 -left-44 animate-[orb-drift-a_28s_ease-in-out_infinite_alternate]"></div>
@@ -88,7 +95,7 @@
     <!-- Hero -->
     <section class="hero" id="top">
       <div class="hero__bg" aria-hidden="true">
-        <video class="hero__video" autoplay muted loop playsinline preload="auto">
+        <video class="hero__video" autoplay muted loop playsinline preload="none" controls>
           <source src="assets/video_hero.mp4" type="video/mp4" />
         </video>
         <div class="hero__scrim"></div>
@@ -124,8 +131,8 @@
       </div>
 
       <div class="hero__metrics">
-        <div class="hero__metric"><strong>8+</strong><span>Años de Experiencia</span></div>
-        <div class="hero__metric"><strong>79+</strong><span>Proyectos Entregados</span></div>
+        <div class="hero__metric"><strong>6+</strong><span>Años de Experiencia</span></div>
+        <div class="hero__metric"><strong>90+</strong><span>Proyectos Entregados</span></div>
         <div class="hero__metric"><strong>95%</strong><span>Satisfacción</span></div>
       </div>
     </section>
