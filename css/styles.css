@@ -1219,6 +1219,8 @@ select.field__input {
   .marquee__track { animation: none; }
   .status-dot { animation: none; }
   .tcard:hover { transform: none; box-shadow: none; }
+  .process__card:hover { transform: none; }
+  .price-card:hover { transform: none; }
   * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
 
